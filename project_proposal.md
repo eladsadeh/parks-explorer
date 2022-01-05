@@ -187,8 +187,18 @@ https://developer.nps.gov/api/v1/
 ```
 
 ## Visual of your component hierarchy
+<img width="693" alt="components" src="https://user-images.githubusercontent.com/93807931/148152566-dd352b75-82e8-4089-8c75-309c1d78e14e.png">
 
 ## Wire Frames
+
+### Home Page
+<img width="814" alt="parks-home" src="https://user-images.githubusercontent.com/93807931/148151474-13874283-a146-4959-88ec-344bde23941d.png">
+
+### Search Results
+<img width="818" alt="parks-results" src="https://user-images.githubusercontent.com/93807931/148151622-9bb94d6e-681b-4e2b-9d7f-0532ed1acf77.png">
+
+### Park Details
+<img width="811" alt="parks-details" src="https://user-images.githubusercontent.com/93807931/148151603-2e2f4e3b-2fae-4bdb-b80c-ffed3abeb40e.png">
 
 
 ## User Stories
