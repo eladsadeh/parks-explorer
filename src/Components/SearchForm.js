@@ -1,28 +1,34 @@
-import React from 'react';
-import Form from 'react-bootstrap/Form';
+import React, {useState }from 'react';
+import states from '../data/states_names.json'
 
 function SearchForm(props) {
+    const formInitialState = [{state: 'Any'}];
+    const [formState ,setFormState] = useState(formInitialState)
+
 	function handleSubmit(ev) {
 		ev.preventDefault();
-console.log(ev);
-		Array.from(ev.target.elements.states.options).forEach((option) => {
-            console.log(option.value, option.selected);
-        });
+        console.log(ev.target.elements.state.value);
+		// Array.from(ev.target.elements.states.options).forEach((option) => {
+		// 	console.log(option.value, option.selected);
+		// });
 	}
 
-    function handleChange(ev) {
-        console.log('handle change');
-        console.log(ev.target.value);
-    }
+	function handleChange(ev) {
+		console.log('handle change');
+		console.log(ev.target.id, ev.target.value);
+        setFormState({ ...formState, [ev.target.id]: ev.target.value });
+	}
+
 	return (
-		<Form className='search-form' onSubmit={(ev) => handleSubmit(ev)}>
-			<Form.Select name='states' id='search-states' multiple={true} onChange={handleChange}>
-				<option value='NH'>New Hampshire</option>
-				<option value='VT'>Vermont</option>
-				<option value='ME'>Maine</option>
-			</Form.Select>
+		<form className='search-form' onSubmit={(ev) => handleSubmit(ev)}>
+            <label htmlFor='search-states'>Select State</label>
+			<select id='state' onChange={handleChange} value={formState.state}>
+				{states.map((state) => {
+					return <option key={state.value} value={state.value}>{state.label}</option>;
+				})}
+			</select>
 			<button type='submit'>Search</button>
-		</Form>
+		</form>
 	);
 }
 
