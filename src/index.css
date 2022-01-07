@@ -68,6 +68,12 @@ h1 {
 	/* padding: 1rem; */
 }
 .park_card_container {
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	min-height: 250px;
+	/* display: inline-block; */
+	background-position: center;
 	border: 1px solid gray;
 	border-radius: 12px;
 	display: flex;
@@ -80,32 +86,44 @@ h1 {
 	/* background-color: whitesmoke; */
 }
 
-.park_card_text {
+.park_card_title {
 	background-color: rgba(254, 245, 230, 0.45);
 	display: inline-block;
-  width: 100%;
+	width: 100%;
 	border-radius: 8px 8px 0 0;
 	color: rgb(0, 33, 0);
 }
-.park_card_text h3 {
+.park_card_title h3 {
+	font-size: 16px;
 	margin: 4px;
 	/* padding: 0 6px; */
 }
-.park_card_image img {
-	/* overflow: hidden; */
-	/* height: 250px; */
-	/* width: 100%;
-	margin: 0;
-	padding: 0; */
+.park_card_title p {
+	font-size: 12px;
+	margin: 4px;
+	/* padding: 0 6px; */
 }
 
+.park_card_footer {
+	background-color: rgba(254, 245, 230, 0.45);
+	color: rgb(0, 33, 0);
+	font-size: 14px;
+	margin: 0px;
+	padding: 5px;
+	display: inline-block;
+	width: 100%;
+	border-radius: 0 0 8px 8px;
+	/* padding: 0 6px; */
+}
+
+/* 
 .park_card_image {
 	width: 100%;
 	min-height: 250px;
 	background-size: cover;
 	background-repeat: no-repeat;
-	/* display: inline-block; */
+	display: inline-block; 
 	background-position: center;
 	margin: 0;
-	border-radius: 11px;
-}
+	border-radius: 11px; 
+} */

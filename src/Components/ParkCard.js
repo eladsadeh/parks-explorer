@@ -5,17 +5,18 @@ function ParkCard({ park }) {
 	// console.log(park.images[0]);
 	return (
 		<Link to={`/${park.parkCode}`}>
-			<div className='park_card_container'>
-				<div
-					className='park_card_image'
-					style={{ backgroundImage: `url(${park.images[0].url})` }}>
-					{/* <img src={park.images[0].url} alt={park.images[0].altText} /> */}
-					<div className='park_card_text'>
-						<h3>{park.name}</h3>
-						<p>{park.designation}</p>
-						<p>{park.addresses[0].city}, {park.addresses[0].stateCode}</p>
-					</div>
+			<div
+				className='park_card_container'
+				style={{ backgroundImage: `url(${park.images[0].url})` }}>
+				{/* <div className='park_card_image'> */}
+				<div className='park_card_title'>
+					<h3>{park.name}</h3>
+					<p>{park.designation}</p>
 				</div>
+				<p className='park_card_footer'>
+					{park.addresses[0].city}, {park.addresses[0].stateCode}
+				</p>
+				{/* </div> */}
 			</div>
 		</Link>
 	);
