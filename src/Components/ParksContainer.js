@@ -3,7 +3,7 @@ import ParkCard from './ParkCard';
 import parksData from '../data/parks_data.json';
 
 function ParksContainer(props) {
-	console.log(parksData);
+	// console.log(parksData);
 	const { data } = parksData;
 	// console.log(data);
 	return (
