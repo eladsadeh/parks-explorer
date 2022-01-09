@@ -12,7 +12,7 @@ function App() {
 		<div className='App'>
 			<Navigation />
 			<Routes>
-				<Route path='/' element={[<About />, <ParksContainer />]}></Route>
+				<Route path='/' element={<ParksContainer />}></Route>
 				{/* <Route path='/' element={<About />}></Route> */}
 				<Route path='/parks/:parkCode' element={<ParkDetails />}></Route>
 			</Routes>

@@ -12,10 +12,6 @@
     "value": "AK"
   },
   {
-    "label": "American Samoa",
-    "value": "AS"
-  },
-  {
     "label": "Arizona",
     "value": "AZ"
   },
@@ -44,20 +40,12 @@
     "value": "DC"
   },
   {
-    "label": "Federated States Of Micronesia",
-    "value": "FM"
-  },
-  {
     "label": "Florida",
     "value": "FL"
   },
   {
     "label": "Georgia",
     "value": "GA"
-  },
-  {
-    "label": "Guam",
-    "value": "GU"
   },
   {
     "label": "Hawaii",
@@ -94,10 +82,6 @@
   {
     "label": "Maine",
     "value": "ME"
-  },
-  {
-    "label": "Marshall Islands",
-    "value": "MH"
   },
   {
     "label": "Maryland",
@@ -160,10 +144,6 @@
     "value": "ND"
   },
   {
-    "label": "Northern Mariana Islands",
-    "value": "MP"
-  },
-  {
     "label": "Ohio",
     "value": "OH"
   },
@@ -182,10 +162,6 @@
   {
     "label": "Pennsylvania",
     "value": "PA"
-  },
-  {
-    "label": "Puerto Rico",
-    "value": "PR"
   },
   {
     "label": "Rhode Island",
@@ -216,10 +192,6 @@
     "value": "VT"
   },
   {
-    "label": "Virgin Islands",
-    "value": "VI"
-  },
-  {
     "label": "Virginia",
     "value": "VA"
   },
@@ -240,4 +212,3 @@
     "value": "WY"
   }
 ]
-
