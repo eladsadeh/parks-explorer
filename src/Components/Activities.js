@@ -1,13 +1,23 @@
 import React from 'react';
+import { Title, Content, AccorionHeader, Activity } from './Accordion';
 
-function Activities({ activities }) {
+function Activities({ title, content, toggleContent, idx, showContent }) {
 
 	return (
-		<div>
-			Activities list
-			{activities.map((activity, idx) => {
-				return <span key={idx}>{activity.name}</span>;
-			})}
+		<div className='accordion_item'>
+			<AccorionHeader
+				className='accordion_item_title'
+				onClick={() => toggleContent(idx)}>
+				<Title>{title}</Title>
+				<Title>{showContent ? '-' : '+'}</Title>
+			</AccorionHeader>
+			{showContent && (
+				<Content>
+					{content.map((activity, i) => {
+						return <Activity key={i}>{activity.name}</Activity>;
+					})}
+				</Content>
+			)}
 		</div>
 	);
 }

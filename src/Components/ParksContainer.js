@@ -9,7 +9,7 @@ function ParksContainer(props) {
 	return (
 		<div className='parks-container'>
 			{data.map((park) => {
-                console.log(park);
+                // console.log(park);
 				return (<ParkCard key={park.id} park={park}/>)
 			})}
 		</div>

@@ -43,6 +43,10 @@ h1 {
 	padding: 0;
 }
 
+.hidden {
+	display: none;
+}
+
 .header-nav a {
 	margin: 8px;
 	color: white;

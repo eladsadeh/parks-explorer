@@ -8,7 +8,6 @@ function ParkCard({ park }) {
 			<div
 				className='park_card_container'
 				style={{ backgroundImage: `url(${park.images[0].url})` }}>
-				{/* <div className='park_card_image'> */}
 				<div className='park_card_title'>
 					<h3>{park.name}</h3>
 					<p>{park.designation}</p>
@@ -16,7 +15,6 @@ function ParkCard({ park }) {
 				<p className='park_card_footer'>
 					{park.addresses[0].city}, {park.addresses[0].stateCode}
 				</p>
-				{/* </div> */}
 			</div>
 		</Link>
 	);
