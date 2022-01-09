@@ -1,5 +1,6 @@
 import React, {useState }from 'react';
 import states from '../data/states_names.json'
+import activities from '../data/activities.json'
 
 function SearchForm(props) {
     const formInitialState = [{state: 'Any'}];
@@ -8,9 +9,6 @@ function SearchForm(props) {
 	function handleSubmit(ev) {
 		ev.preventDefault();
         console.log(ev.target.elements.state.value);
-		// Array.from(ev.target.elements.states.options).forEach((option) => {
-		// 	console.log(option.value, option.selected);
-		// });
 	}
 
 	function handleChange(ev) {
@@ -21,13 +19,31 @@ function SearchForm(props) {
 
 	return (
 		<form className='search-form' onSubmit={(ev) => handleSubmit(ev)}>
-            <label htmlFor='search-states'>Select State</label>
-			<select id='state' onChange={handleChange} value={formState.state}>
+			<label htmlFor='search-states'>Select State</label>
+			<select
+				className='single-select'
+				id='state'
+				onChange={handleChange}
+				value={formState.state}>
 				{states.map((state) => {
-					return <option key={state.value} value={state.value}>{state.label}</option>;
+					return (
+						<option key={state.value} value={state.value}>
+							{state.label}
+						</option>
+					);
 				})}
 			</select>
-			<button type='submit'>Search</button>
+			<label htmlFor='search-activities'>Select Activity</label>
+			<select
+				className='single-select'
+				id='activities'
+				onChange={handleChange}
+				value={formState.activity}>
+				{activities.map((activity, index) => {
+					return <option key={index}>{activity}</option>;
+				})}
+			</select>
+			{/* <button type='submit'>Search</button> */}
 		</form>
 	);
 }

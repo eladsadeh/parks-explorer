@@ -5,9 +5,8 @@ import styled from 'styled-components';
 const CarouselContainer = styled.div`
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-size: cover;
-	width: 45vw;
-	height: 25vw;
+	width: 100%;
+	height: 50vw;
 	background-position: center;
 	border: 1px solid gray;
 	border-radius: 12px;
@@ -18,7 +17,7 @@ const CarouselContainer = styled.div`
 `;
 
 const Arrow = styled.span`
-	color: rgba(30, 100, 30, 0.7);
+	color: rgba(0, 0, 0, 0.5);
 	font-size: 48px;
 	cursor: pointer;
 	margin: 10px;

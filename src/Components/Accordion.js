@@ -14,14 +14,14 @@ export const Content = styled.p`
 	color: black;
 	font-size: 14px;
 	text-align: left;
-	margin: 10px;
+    padding: 0 10px;
 	width: 100%;
 `;
 
 export const AccorionHeader = styled.div`
 	display: flex;
 	justify-content: space-between;
-	background-color: gray;
+	background-color: transparent;
 	padding: 0 10px;
 `;
 
@@ -36,10 +36,12 @@ export const Activity = styled.span`
 `;
 
 const AccordionWrap = styled.div`
-	width: 500px;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	border-radius: 10px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 3px 3px black;
 `;
 
 function Accordion({ data }) {

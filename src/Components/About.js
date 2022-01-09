@@ -3,7 +3,7 @@ import SearchForm from './SearchForm';
 
 function About(props) {
 	return (
-		<div>
+		<div className='about'>
 			<h2>About pArkZ</h2>
 			<SearchForm />
 		</div>
