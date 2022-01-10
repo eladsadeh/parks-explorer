@@ -63,17 +63,24 @@ h1 {
 .about {
 	color: whitesmoke;
 }
-.search-form {
+.form {
 	display: flex;
 	flex-direction: column;
 	text-align: left;
 	color: whitesmoke;
 }
-.single-select {
+.input {
 	padding: 4px;
 	border-radius: 5px;
 	margin-top: 4px;
 	font-size: 14px;
+}
+
+.form-inputs {
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	padding: 8px;
 }
 
 .parks-container {
