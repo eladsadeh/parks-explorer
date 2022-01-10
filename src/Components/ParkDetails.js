@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
-// Use static data to configure components
-// import acad_data from '../data/acad.json';
-import Activities from './Activities';
+
 import Carousel from './Carousel';
 import Accordion from './Accordion';
 

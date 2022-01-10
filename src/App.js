@@ -5,6 +5,7 @@ import About from './Components/About';
 import parksData from './data/parks_data.json';
 import ParksContainer from './Components/ParksContainer';
 import ParkDetails from './Components/ParkDetails';
+import Home from './Components/Home';
 
 function App() {
 	// console.log(parksData);
@@ -12,9 +13,10 @@ function App() {
 		<div className='App'>
 			<Navigation />
 			<Routes>
-				<Route path='/' element={<ParksContainer />}></Route>
-				{/* <Route path='/' element={<About />}></Route> */}
-				<Route path='/parks/:parkCode' element={<ParkDetails />}></Route>
+				<Route path='/' element={<Home />} />
+				<Route path='/:state' element={<ParksContainer />} />
+				<Route path='/about' element={<About />} />
+				<Route path='/parks/:parkCode' element={<ParkDetails />} />
 			</Routes>
 		</div>
 	);

@@ -14,15 +14,18 @@ export const Content = styled.p`
 	color: black;
 	font-size: 14px;
 	text-align: left;
-    padding: 0 10px;
+	margin: 0;
+	padding: 10px;
 	width: 100%;
+	border-bottom: 1px solid black;
 `;
 
 export const AccorionHeader = styled.div`
 	display: flex;
 	justify-content: space-between;
 	background-color: transparent;
-	padding: 0 10px;
+	padding: 0 20px;
+	border-bottom: 1px solid black;
 `;
 
 export const Activity = styled.span`

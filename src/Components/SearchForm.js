@@ -1,36 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import states from '../data/states_names.json';
 
-function SearchForm({ setParks }) {
-	const initialState = 'Any';
-	const [searchState, setSearchState] = useState(initialState);
-
-	function fetchParks(stateCode) {
-		const key = process.env.REACT_APP_NPS_KEY;
-		const baseUrl = 'https://developer.nps.gov/api/v1/';
-		const url = `${baseUrl}parks?stateCode=${stateCode}&api_key=${key}`;
-		// console.log(url);
-
-		fetch(url)
-			.then((res) => res.json())
-			.then((res) => {
-				setParks(res.data);
-
-				// console.log('results', res.data);
-			});
-	}
+function SearchForm(props) {
+    let { state } = useParams()
+	// const [searchState, setSearchState] = useState(state);
+	let navigate = useNavigate();
 
 	function handleSearch(ev) {
-        ev.preventDefault();
-		console.log('handle search');
-		setSearchState(ev.target.value);
-		// console.log(ev.target.id, ev.target.value);
+		// ev.preventDefault();
+		// setSearchState(ev.target.value);
 
 		console.log('searching by state', ev.target.value);
-		fetchParks(ev.target.value);
-
-		// setFormState(formInitialState);
-		// console.log(formState);
+        // Navigate to /:state
+		navigate(`/${ev.target.value}`);
 	}
 
 	return (
@@ -40,10 +23,10 @@ function SearchForm({ setParks }) {
 				className='single-select input'
 				id='search-states'
 				onChange={handleSearch}
-				value={searchState}>
-				{states.map((state) => {
+				value={state}>
+				{states.map((state, idx) => {
 					return (
-						<option key={state.value} value={state.value}>
+						<option key={idx} value={state.value}>
 							{state.label}
 						</option>
 					);

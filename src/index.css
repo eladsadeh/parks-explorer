@@ -49,10 +49,26 @@ header {
 
 h1 {
 	padding: 0;
+	font-size: 30px;
+}
+
+@media (max-width: 600px) {
+	h1 {
+		font-size: 20px;
+	}
 }
 
 .hidden {
 	display: none;
+}
+
+.nav-item {
+	text-decoration: none;
+}
+
+.nav-list {
+	list-style: none;
+	display: flex;
 }
 
 .header-nav a {
@@ -60,14 +76,23 @@ h1 {
 	color: white;
 }
 
+.home  {
+	color: whitesmoke;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 .about {
 	color: whitesmoke;
+	text-align: left;
+	width: 80%;
 }
 .form {
 	display: flex;
 	flex-direction: column;
 	text-align: left;
 	color: whitesmoke;
+	max-width: 250px;
 }
 .input {
 	padding: 4px;
@@ -80,12 +105,12 @@ h1 {
 	display: flex;
 	justify-content: space-evenly;
 	width: 100%;
-	padding: 8px;
+	padding-top: 20px;
 }
 
 .parks-container {
 	background-color: rgb(0, 33, 0);
-	padding: 30px;
+	padding: 10px 30px;
 	/* Flex */
 	/* display: flex;
   justify-content: space-around;

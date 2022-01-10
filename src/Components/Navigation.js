@@ -6,9 +6,14 @@ function Navigation(props) {
 		<header>
 			<h1>pArk-Z: Find Your Advanture</h1>
 			<nav className='header-nav'>
-				<Link to='/'>Home</Link>
-				<Link to='/search'>Search</Link>
-				<Link to='/about'>About</Link>
+				<ul className='nav-list'>
+					<li className='nav-item'>
+						<Link to='/'>Home</Link>
+					</li>
+					<li className='nav-item'>
+						<Link to='/about'>About</Link>
+					</li>
+				</ul>
 			</nav>
 		</header>
 	);

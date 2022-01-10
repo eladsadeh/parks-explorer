@@ -1,7 +1,19 @@
 [
   {
-    "label": "All",
-    "value": ""
+    "label": "Select State",
+    "value": "NONE"
+  },
+  {
+    "label": "North East",
+    "value": "ME,NH,VT,MA,CT,RI"
+  },
+  {
+    "label": "West Coast",
+    "value": "WA,OR,CA"
+  },
+  {
+    "label": "Rock Mountains",
+    "value": "CO,WY,MT,UT,NM,ID"
   },
   {
     "label": "Alabama",
