@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import ParkCard from './ParkCard';
 import SearchForm from './SearchForm';
 import FilterForm from './FilterForm';
-import Message from './Message'
+import Message from './Message';
 
 function ParksContainer(props) {
 	const [filterValue, setFilter] = useState('');
@@ -67,15 +67,23 @@ function ParksContainer(props) {
 		} else return true;
 	}
 
+	function filteredParksNum() {
+		return result.reduce((acc, park) => (showPark(park) ? acc + 1 : acc), 0);
+	}
+
 	return (
 		<div className='parks-main'>
 			<div className='form-inputs'>
 				<SearchForm />
 				<FilterForm setFilter={setFilter} filter={filterValue} />
 			</div>
-				{loading && <Message content={'Loading Results ...'} />}
-				{error && <Message content={error} />}
-				{!!result.length && <Message content={`Showing ${result.length} parks`} />}
+			{loading && <Message content={'Loading Results ...'} />}
+			{error && <Message content={error} />}
+			{!!result.length && (
+				<Message
+					content={`Showing ${filteredParksNum()} out of ${result.length} parks`}
+				/>
+			)}
 			<div className='parks-container'>
 				{!!result.length &&
 					result.map((park) => {
