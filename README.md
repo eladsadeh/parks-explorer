@@ -15,6 +15,19 @@ The user can filter the results by activities.
     - Carousel with images.
     - Accordion with description, weather, and list of activities.
 
+## Screen shots
+
+### Home screen
+![Screen Shot 2022-01-10 at 7 30 34 PM](https://user-images.githubusercontent.com/93807931/148860880-f57e837b-e59c-49c8-bee9-20748c9cf8ec.png)
+
+### Results screen
+![Screen Shot 2022-01-10 at 7 30 59 PM](https://user-images.githubusercontent.com/93807931/148860947-1c9402c4-8938-4a14-ac58-e0bc77902777.png)
+
+
+### Park details
+![Screen Shot 2022-01-10 at 7 31 19 PM](https://user-images.githubusercontent.com/93807931/148860961-fd6345ba-da24-456e-b5f2-9e79e5044e86.png)
+
+
 ## Technologies Used
 
 - JavaScript
