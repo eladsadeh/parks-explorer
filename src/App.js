@@ -1,8 +1,7 @@
-import Navigation from './Components/Navigation';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import About from './Components/About';
-import parksData from './data/parks_data.json';
+import Navigation from './Components/Navigation';
 import ParksContainer from './Components/ParksContainer';
 import ParkDetails from './Components/ParkDetails';
 import Home from './Components/Home';
