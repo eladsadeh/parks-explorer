@@ -4,16 +4,20 @@
     "value": "NONE"
   },
   {
-    "label": "North East",
+    "label": "New England",
     "value": "ME,NH,VT,MA,CT,RI"
   },
   {
-    "label": "West Coast",
+    "label": "West-Coast",
     "value": "WA,OR,CA"
   },
   {
-    "label": "Rock Mountains",
-    "value": "CO,WY,MT,UT,NM,ID"
+    "label": "Rocky Mountains",
+    "value": "CO,WY,MT,UT,ID,NV"
+  },
+  {
+    "label": "South-West",
+    "value": "TX,AZ,NM,OK"
   },
   {
     "label": "Alabama",
