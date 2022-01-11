@@ -5,6 +5,9 @@ pArk-Z (A-Z parks) is an app developt with React that let the use explore nation
 The use select a state and the app uses the National Parks Services API to fetch a list of parks in the selected state.
 The user can filter the results by activities.
 
+## Deployed App
+https://park-z-explorer.netlify.app/
+
 ## How to use the app
 
 - At the home screen, select the state you want to search for national parks.
