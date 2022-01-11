@@ -18,11 +18,8 @@ const Location = styled.p`
 `;
 
 const Details = styled.div`
-	/* display: flex;
-    flex-direction: row; */
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	/* grid-auto-rows: auto; */
 	grid-gap: 3vw;
 	margin-top: 20px;
 	width: 100%;
@@ -32,20 +29,13 @@ const Wrapper = styled.div`
 	background-color: rgb(0, 33, 0);
 	display: flex;
 	flex-direction: column;
-	/* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-	grid-auto-rows: auto;
-	grid-gap: 10px; */
-	/* margin: 0 auto; */
 	width: 100%;
     padding: 30px;
 `;
 
 function ParkDetails(props) {
 	const { parkCode } = useParams();
-	// const { data } = acad_data;
 	const [park, setPark] = useState();
-	// console.log(parkCode);
-	// console.log(park);
 
 	useEffect(() => {
 		const key = process.env.REACT_APP_NPS_KEY;
@@ -55,8 +45,6 @@ function ParkDetails(props) {
 			.then((res) => res.json())
 			.then((res) => {
 				setPark(res.data[0]);
-
-				console.log('park', park);
 			});
 	}, [parkCode]);
 

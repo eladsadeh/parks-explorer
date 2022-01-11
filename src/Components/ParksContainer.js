@@ -6,18 +6,13 @@ import FilterForm from './FilterForm';
 import Message from './Message'
 
 function ParksContainer(props) {
-	// const [parks, setParks] = useState([]);
 	const [filterValue, setFilter] = useState('');
 	let { state } = useParams();
-	// console.log('Parks container:', state);
 	const initialFetchState = { loading: false, result: [], error: '' };
 	const [APIstate, dispatch] = useReducer(apiStateReducer, initialFetchState);
 	const { loading, result, error } = APIstate;
 
 	function apiStateReducer(state, action) {
-		console.log('state:', state, "action:", action);
-				// console.log(loading, result, error);
-
 		switch (action.type) {
 			case 'loading': {
 				return { ...initialFetchState, loading: true };
@@ -43,22 +38,16 @@ function ParksContainer(props) {
 		fetch(url)
 			.then((res) => {
 				if (res.status === 404) {
-					console.log('error');
 					return dispatch({
 						type: 'error',
 						error: `No results found for ${state}. Please try again!`,
 					});
 				} else if (res.status === 200) {
-					// console.log('200:', res);
 					return res.json();
 				}
 			})
 			.then((data) => {
-				// console.log(data);
 				dispatch({ type: 'success', data });
-				// setParks(data.data);
-				// console.log(parks.length);
-				// console.log('results', res.data);
 			})
 			.catch((err) => {
 				dispatch({
@@ -77,8 +66,6 @@ function ParksContainer(props) {
 			}, false);
 		} else return true;
 	}
-
-	console.log(APIstate);
 
 	return (
 		<div className='parks-main'>

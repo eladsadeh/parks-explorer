@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function ParkCard({ park }) {
-	// console.log(park.images[0]);
 	return (
 		<Link to={`/parks/${park.parkCode}`}>
 			<div

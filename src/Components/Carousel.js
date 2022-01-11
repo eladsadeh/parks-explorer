@@ -24,10 +24,10 @@ const Arrow = styled.span`
 `;
 
 function Carousel({ images }) {
-	console.log(images.length);
 	let [currentIdx, setCurrentIdx] = useState(0);
 
 	function showNextImage(next) {
+		// increment/decrement index while keeping the index in the boundries of the array length
 		if (currentIdx + next >= images.length) {
 			setCurrentIdx(currentIdx + next - images.length);
 		} else if (currentIdx + next < 0) {

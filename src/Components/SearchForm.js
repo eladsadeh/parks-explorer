@@ -1,18 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import states from '../data/states_names.json';
 
 function SearchForm(props) {
     let { state } = useParams()
-	// const [searchState, setSearchState] = useState(state);
 	let navigate = useNavigate();
 
 	function handleSearch(ev) {
-		// ev.preventDefault();
-		// setSearchState(ev.target.value);
-
-		console.log('searching by state', ev.target.value);
-        // Navigate to /:state
 		navigate(`/${ev.target.value}`);
 	}
 
