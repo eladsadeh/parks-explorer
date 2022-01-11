@@ -2,11 +2,12 @@ import React from 'react';
 import { Title, Content, AccorionHeader, Activity } from './Accordion';
 
 function Activities({ title, content, toggleContent, idx, showContent }) {
-
 	return (
 		<div className='accordion_item'>
 			<AccorionHeader
-				className='accordion_item_title'
+				className={
+					showContent ? 'accordion_item_title active' : 'accordion_item_title'
+				}
 				onClick={() => toggleContent(idx)}>
 				<Title>{title}</Title>
 				<Title>{showContent ? '-' : '+'}</Title>

@@ -26,6 +26,11 @@ export const AccorionHeader = styled.div`
 	background-color: transparent;
 	padding: 0 20px;
 	border-bottom: 1px solid black;
+
+	&.active {
+		font-style: italic;
+		border-bottom: 2px solid black;
+	}
 `;
 
 export const Activity = styled.span`
@@ -43,8 +48,8 @@ const AccordionWrap = styled.div`
 	display: flex;
 	flex-direction: column;
 	border-radius: 10px;
-    background-color: whitesmoke;
-    box-shadow: 0 0 3px 3px black;
+	background-color: whitesmoke;
+	box-shadow: 0 0 3px 3px black;
 `;
 
 function Accordion({ data }) {
