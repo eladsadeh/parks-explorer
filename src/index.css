@@ -27,6 +27,10 @@ body {
 	justify-content: center;
 }
 
+.message {
+	color: whitesmoke;
+	padding: 10px;
+}
 .parks-main {
 	width: 100%;
 	display: flex;
