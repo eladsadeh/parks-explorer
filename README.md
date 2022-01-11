@@ -44,7 +44,6 @@ https://developer.nps.gov/api/v1/
 ## Instalation
 
 - Fork and clone the repository
-- go to the new directory
-- run `create-react-app .` to install React
-- run `npm install styled-components`
+- go to the new directory (`cd parks-explorer`)
+- run `npm install`
 - run `npm start` to run the app on local server
