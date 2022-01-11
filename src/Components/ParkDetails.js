@@ -36,6 +36,9 @@ const Wrapper = styled.div`
 function ParkDetails(props) {
 	const { parkCode } = useParams();
 	const [park, setPark] = useState();
+	// const [loading, setLoading] = useState(true);
+	// const [error, setError] = useState('');
+
 
 	useEffect(() => {
 		const key = process.env.REACT_APP_NPS_KEY;
