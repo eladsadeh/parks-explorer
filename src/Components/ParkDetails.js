@@ -4,17 +4,18 @@ import { useParams } from 'react-router-dom';
 
 import Carousel from './Carousel';
 import Accordion from './Accordion';
+import Message from './Message';
 
 const Title = styled.h2`
 	font-size: 18px;
 	color: whitesmoke;
-    margin: 0;
+	margin: 0;
 `;
 
 const Location = styled.p`
 	font-size: 14px;
 	color: whitesmoke;
-    margin: 0 auto;
+	margin: 0 auto;
 `;
 
 const Details = styled.div`
@@ -30,28 +31,42 @@ const Wrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-    padding: 30px;
+	padding: 30px;
 `;
 
 function ParkDetails(props) {
 	const { parkCode } = useParams();
 	const [park, setPark] = useState();
-	// const [loading, setLoading] = useState(true);
-	// const [error, setError] = useState('');
-
+	const [loading, setLoading] = useState(true);
+	const [error, setError] = useState('');
 
 	useEffect(() => {
 		const key = process.env.REACT_APP_NPS_KEY;
 		const url = `https://developer.nps.gov/api/v1/parks?parkCode=${parkCode}&api_key=${key}`;
+		setLoading(true);
 
 		fetch(url)
-			.then((res) => res.json())
+			.then((res) => {
+				if (res.status === 404) {
+					setError(`No results found for ${parkCode}. Please try again!`);
+					setLoading(false);
+				} else if (res.status === 200) {
+					setLoading(false);
+					return res.json();
+				}
+			})
 			.then((res) => {
 				setPark(res.data[0]);
+			})
+			.catch((err) => {
+				setLoading(false);
+				setError('Oops, something went wrong! Please try again later.');
 			});
 	}, [parkCode]);
 
-	if (!park) return null;
+	if (loading) return <Message content='Loading park information ...' />;
+	if (error) return <Message content={error} />;
+	if (!park) return <Message content='Could not get park information ...' />;
 	return (
 		<Wrapper className='park_details'>
 			<Title className='park_details-title'>{park.fullName}</Title>
