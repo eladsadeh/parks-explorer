@@ -30,6 +30,8 @@ https://park-z-explorer.netlify.app/
 ### Park details
 ![Screen Shot 2022-01-10 at 7 31 19 PM](https://user-images.githubusercontent.com/93807931/148860961-fd6345ba-da24-456e-b5f2-9e79e5044e86.png)
 
+## API Used
+https://developer.nps.gov/api/v1/
 
 ## Technologies Used
 
