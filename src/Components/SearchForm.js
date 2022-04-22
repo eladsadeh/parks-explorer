@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import states from '../data/states_names.json';
 
 function SearchForm(props) {
-    let { state } = useParams()
+	let { state } = useParams();
 	let navigate = useNavigate();
 
 	function handleSearch(ev) {

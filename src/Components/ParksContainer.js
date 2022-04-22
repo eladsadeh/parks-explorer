@@ -1,12 +1,15 @@
-import React, { useState, useEffect, useReducer } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useReducer } from 'react';
+import { useParams, useSearchParams } from 'react-router-dom';
 import ParkCard from './ParkCard';
 import SearchForm from './SearchForm';
 import FilterForm from './FilterForm';
 import Message from './Message';
 
 function ParksContainer(props) {
-	const [filterValue, setFilter] = useState('');
+	let [searchParams] = useSearchParams();
+	// Get activity filter from URL
+	const activityFilter = searchParams.get('activity');
+
 	let { state } = useParams();
 	const initialFetchState = { loading: false, result: [], error: '' };
 	const [APIstate, dispatch] = useReducer(apiStateReducer, initialFetchState);
@@ -58,9 +61,9 @@ function ParksContainer(props) {
 	}, [state]);
 
 	function showPark(park) {
-		if (/[a-zA-Z]/.exec(filterValue)) {
+		if (activityFilter) {
 			return park.activities.reduce((prev, curr) => {
-				return curr.name.toLowerCase().includes(filterValue.toLowerCase())
+				return curr.name.toLowerCase().includes(activityFilter.toLowerCase())
 					? true
 					: prev;
 			}, false);
@@ -75,13 +78,15 @@ function ParksContainer(props) {
 		<div className='parks-main'>
 			<div className='form-inputs'>
 				<SearchForm />
-				<FilterForm setFilter={setFilter} filter={filterValue} />
+				<FilterForm />
 			</div>
 			{loading && <Message content={'Loading Results ...'} />}
 			{error && <Message content={error} />}
 			{!!result.length && (
 				<Message
-					content={`Showing ${filteredParksNum()} out of ${result.length} parks`}
+					content={`Showing ${filteredParksNum()} out of ${
+						result.length
+					} parks`}
 				/>
 			)}
 			<div className='parks-container'>
